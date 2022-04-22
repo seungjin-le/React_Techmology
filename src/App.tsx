@@ -8,6 +8,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/:text" element={<Home />} />
+        <Route path="/:text/:texts" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );

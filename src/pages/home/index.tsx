@@ -6,11 +6,12 @@ import UseRef from "../../components/useHooks/useref/useRef";
 
 const Home = () => {
   const params: any = useParams();
-
+  console.log(params);
   return (
     <Layout>
       <h2>url 뒤에 '/아무거나 써보세요'</h2>
       <h2>{params?.text}</h2>
+      <h2>{params?.test}</h2>
       <hr />
       {/* 2개의 input 상태관리 */}
       <h1>useState</h1>
