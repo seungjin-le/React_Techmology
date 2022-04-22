@@ -6,8 +6,6 @@ const UseRef = () => {
     <div className={"scroll"}>
       <h3>Scroll</h3>
       <Scroll />
-      <button>Down</button>
-      <button>Up</button>
     </div>
   );
 };
