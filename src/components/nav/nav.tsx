@@ -1,13 +1,11 @@
 import "./nav.scss";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router";
 
 const Nav = () => {
   return (
     <div className={"navBody"}>
       <Link to="/">Home</Link>
-      <Link to="/useState">useState</Link>
-      <Link to="/useRef">useRef</Link>
-      <Link to="/">test</Link>
     </div>
   );
 };
