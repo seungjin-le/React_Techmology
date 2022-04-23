@@ -1,7 +1,8 @@
 import Layout from "../../container/layout/Layout";
-import UseState from "../../components/useHooks/useStates/useState";
+import TwoInputs from "../../components/useHooks/useStates/twoInputs";
 import { useParams } from "react-router";
 import UseRef from "../../components/useHooks/useref/useRef";
+import ArrDataAdd from "../../components/useHooks/useStates/arrDataAdd";
 
 const Home = (): JSX.Element => {
   const params: any = useParams();
@@ -9,23 +10,29 @@ const Home = (): JSX.Element => {
   switch (params.url) {
     case "usestate":
       // 2개의 input 상태관리
-      component = <UseState />;
+      // 객체에 input 으로 text 데이터 입력 버튼
+      component = (
+        <div>
+          <TwoInputs />
+          <ArrDataAdd />
+        </div>
+      );
       break;
     case "useref":
       // Scroll Up, Down 버튼
       component = <UseRef />;
       break;
     default:
-      component = <h3>위 에 링크를 클릭해 주세요</h3>;
+      component = (
+        <div>
+          <h1>안녕하세요 ?</h1>
+          <h3>위 에 링크를 클릭해 주세요</h3>
+        </div>
+      );
       break;
   }
 
-  return (
-    <Layout>
-      <h2>안녕하세요</h2>
-      {component}
-    </Layout>
-  );
+  return <Layout>{component}</Layout>;
 };
 
 export default Home;

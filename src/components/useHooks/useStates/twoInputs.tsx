@@ -2,7 +2,7 @@ import { useState } from "react";
 
 // useState 로 2개의 input 을 관리
 // join 이나 login 의 적합할것 같다
-const UseState = () => {
+const TwoInputs = () => {
   const [form, setForm] = useState({
     name: "",
     msg: "",
@@ -32,6 +32,7 @@ const UseState = () => {
   };
   return (
     <div>
+      <h2>1개의 state 로 2개의 input 상태관리</h2>
       <input type="text" name={"name"} value={name} onChange={onChange} />
       <input
         type="text"
@@ -47,4 +48,4 @@ const UseState = () => {
   );
 };
 
-export default UseState;
+export default TwoInputs;
