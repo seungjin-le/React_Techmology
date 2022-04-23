@@ -1,25 +1,29 @@
 import Layout from "../../container/layout/Layout";
-import React from "react";
 import UseState from "../../components/useHooks/useStates/useState";
 import { useParams } from "react-router";
 import UseRef from "../../components/useHooks/useref/useRef";
 
-const Home = () => {
+const Home = (): JSX.Element => {
   const params: any = useParams();
-  console.log(params);
+  let component: JSX.Element;
+  switch (params.url) {
+    case "usestate":
+      // 2개의 input 상태관리
+      component = <UseState />;
+      break;
+    case "useref":
+      // Scroll Up, Down 버튼
+      component = <UseRef />;
+      break;
+    default:
+      component = <h3>위 에 링크를 클릭해 주세요</h3>;
+      break;
+  }
+
   return (
     <Layout>
-      <h2>url 뒤에 '/아무거나 써보세요'</h2>
-      <h2>{params?.text}</h2>
-      <h2>{params?.test}</h2>
-      <hr />
-      {/* 2개의 input 상태관리 */}
-      <h1>useState</h1>
-      <UseState />
-      <hr />
-      <h1>useRef</h1>
-      {/* Scroll Up, Down 버튼 */}
-      <UseRef />
+      <h2>안녕하세요</h2>
+      {component}
     </Layout>
   );
 };
