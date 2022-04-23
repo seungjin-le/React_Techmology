@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ArrDataAdd = () => {
+const ObjDataAdd = () => {
   const [names, setNames] = useState<any>([
     { id: 1, text: "눈사람" },
     { id: 2, text: "얼음" },
@@ -9,12 +9,11 @@ const ArrDataAdd = () => {
   ]);
   const [inputText, setInputText] = useState<string>("");
   const [nextId, setNextId] = useState<number>(5);
-
-  const nameList = names.map((v: any) => <div key={v.id}>{v.text}</div>);
   const onChangeText = ({ target }: any) => {
     setInputText(target.value);
   };
   const onClick = () => {
+    // push 함수는기존 배열자체를 변경해서 분변성을 유지하지 못해서 concat 를 사용
     const nextNames = names.concat({
       id: nextId,
       text: inputText,
@@ -28,6 +27,16 @@ const ArrDataAdd = () => {
       onClick();
     }
   };
+
+  const onRemove = (id: number) => {
+    const nextNames = names.filter((name: any) => name.id !== id);
+    setNames(nextNames);
+  };
+  const nameList = names.map((v: any) => (
+    <li key={v.id} onDoubleClick={() => onRemove(v.id)}>
+      {v.text}
+    </li>
+  ));
   return (
     <div>
       <h2>input text 데이터를 객체에 추가</h2>
@@ -43,4 +52,4 @@ const ArrDataAdd = () => {
   );
 };
 
-export default ArrDataAdd;
+export default ObjDataAdd;

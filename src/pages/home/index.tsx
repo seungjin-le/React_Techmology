@@ -2,7 +2,7 @@ import Layout from "../../container/layout/Layout";
 import TwoInputs from "../../components/useHooks/useStates/twoInputs";
 import { useParams } from "react-router";
 import UseRef from "../../components/useHooks/useref/useRef";
-import ArrDataAdd from "../../components/useHooks/useStates/arrDataAdd";
+import ObjDataAdd from "../../components/useHooks/useStates/objDataAdd";
 
 const Home = (): JSX.Element => {
   const params: any = useParams();
@@ -14,7 +14,7 @@ const Home = (): JSX.Element => {
       component = (
         <div>
           <TwoInputs />
-          <ArrDataAdd />
+          <ObjDataAdd />
         </div>
       );
       break;
