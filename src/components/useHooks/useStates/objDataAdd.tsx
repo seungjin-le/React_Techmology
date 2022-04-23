@@ -12,6 +12,7 @@ const ObjDataAdd = () => {
   const onChangeText = ({ target }: any) => {
     setInputText(target.value);
   };
+
   const onClick = () => {
     // push 함수는기존 배열자체를 변경해서 분변성을 유지하지 못해서 concat 를 사용
     const nextNames = names.concat({
@@ -27,7 +28,6 @@ const ObjDataAdd = () => {
       onClick();
     }
   };
-
   const onRemove = (id: number) => {
     const nextNames = names.filter((name: any) => name.id !== id);
     setNames(nextNames);
