@@ -3,6 +3,7 @@ import TwoInputs from "../../components/useHooks/useStates/twoInputs";
 import { useParams } from "react-router";
 import UseRef from "../../components/useHooks/useref/useRef";
 import ObjDataAdd from "../../components/useHooks/useStates/objDataAdd";
+import CodingTest from "../../components/codingTest";
 
 const Home = (): JSX.Element => {
   const params: any = useParams();

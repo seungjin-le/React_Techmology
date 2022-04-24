@@ -4,9 +4,10 @@
 > + #### react-router-dom
 > + #### react-router
 > + #### node-sass
+> + #### axios
 
 ## Styling
-> + #### Sass
+> + #### Scss
 
 # 학습
 
