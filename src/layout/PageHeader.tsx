@@ -1,5 +1,5 @@
 const PageHeader = () => {
-  return <div></div>
+  return <div>PageHeader</div>
 }
 
 export default PageHeader

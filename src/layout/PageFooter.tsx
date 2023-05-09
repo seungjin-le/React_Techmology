@@ -1,5 +1,5 @@
 const PageFooter = () => {
-  return <div></div>
+  return <div>PageFooter</div>
 }
 
 export default PageFooter

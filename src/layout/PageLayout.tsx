@@ -7,11 +7,11 @@ interface PageProps {
   children?: React.ReactNode
 }
 
-const PageLayout: React.FC<PageProps> = ({children}: PageProps) => {
+const PageLayout: React.FC<PageProps> = () => {
   return (
     <>
       <PageHeader />
-      <PageSection>{children}</PageSection>
+      <PageSection />
       <PageFooter />
     </>
   )

@@ -1,22 +1,15 @@
 import React, {Component, Suspense} from 'react'
-import {BrowserRouter, Route, Routes} from 'react-router-dom'
-import Main from 'pages/home/Main'
+import {BrowserRouter} from 'react-router-dom'
+import PageLayout from 'layout/PageLayout'
 
-const loading = <div>asd</div>
-
-const Page404 = React.lazy(() => import('pages/page404/Page404'))
-const Page500 = React.lazy(() => import('pages/page500/Page500'))
+const loading = <div>Loading</div>
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <Suspense fallback={loading}>
-          <Routes>
-            <Route path='/404' element={<Page404 />} />
-            <Route path='/500' element={<Page500 />} />
-            <Route path='/*' element={<Main />} />
-          </Routes>
+          <PageLayout />
         </Suspense>
       </BrowserRouter>
     )
