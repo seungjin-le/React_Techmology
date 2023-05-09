@@ -1,5 +1,12 @@
-const Main = () => {
-  return <div>asdasd</div>;
-};
+import React from 'react'
+import PageLayout from 'layout/PageLayout'
 
-export default Main;
+const Main: React.FC = () => {
+  return (
+    <PageLayout>
+      <div>asdqweqweqe</div>
+    </PageLayout>
+  )
+}
+
+export default Main
